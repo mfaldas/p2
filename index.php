@@ -7,7 +7,7 @@ require 'logic.php';
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Selena Gomez</title>
+    <title>Katy Perry's Bill Splitter</title>
     <meta charset='utf-8'>
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'
           rel='stylesheet' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm'
@@ -64,10 +64,14 @@ require 'logic.php';
         </div>
 
     <?php elseif (!$validCalculation) : ?>
-        <p>Unable to make calculation as the split bill would be less than $0.01.</p>
+        <div class='alert alert-danger'>
+            Unable to make calculation as the split bill would be less than $0.01.
+        </div>
 
     <?php else : ?>
-        <p><?=$printResults?></p>
+        <div class="alert alert-success">
+            <?=$printResults?>
+        </div>
 
     <?php endif; ?>
 
