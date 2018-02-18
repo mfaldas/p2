@@ -17,8 +17,9 @@ $form = new MyForm($_GET);
 
 $split = $form->get('split', '');
 $bill = $form->get('bill', '');
-$tip = 1;
-#$tip =  isset($_GET['tip']) ? $_GET['tip'] : '';
+$tip =  isset($_GET['tip']) ? $_GET['tip'] : '';
+$roundUp = $form->has('roundUp');
+$validCalculation = true;
 
 if ($form->isSubmitted()) {
     $errors = $form->validate(
@@ -33,12 +34,21 @@ $splitter = new Splitter($split, $bill, $tip, true);
 
 $billWithTip = $splitter->getBillWithTip();
 $calcS = $splitter->calculatedSplit($billWithTip, $split);
+$splitBetween = $splitter->splitWays($billWithTip, $split, $calcS);
+
+
+dump($splitBetween);
 
 if ($calcS < 0.01) {
-    echo @"Cannot split bill due to low bill.";
+    $validCalculation = false;
 } else {
-    dump( $splitter->splitWays($billWithTip, $split, $calcS) );
+
+    if ($roundUp == true) {
+        $splitBetween = $splitter->roundWhole($splitBetween);
+    }
 }
+
+$printResults = $splitter->resultMaker($splitBetween);
 
 
 

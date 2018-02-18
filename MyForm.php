@@ -35,13 +35,17 @@ class MyForm extends Form{
 
     private function secondaryBillValidity($test) {
 
-        $splicedTest = explode(".",$test);
-        $checkDecimal = $splicedTest[1];
-
-        if (strlen($checkDecimal) <= 2) {
+        if ( !strpos($test,'.')) {
             return true;
         } else {
-            return false;
+            $splicedTest = explode(".", $test);
+            $checkDecimal = $splicedTest[1];
+
+            if (strlen($checkDecimal) <= 2) {
+                return true;
+            } else {
+                return false;
+            }
         }
     }
     /**
