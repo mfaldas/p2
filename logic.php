@@ -37,8 +37,6 @@ $calcS = $splitter->calculatedSplit($billWithTip, $split);
 $splitBetween = $splitter->splitWays($billWithTip, $split, $calcS);
 
 
-dump($splitBetween);
-
 if ($calcS < 0.01) {
     $validCalculation = false;
 } else {
