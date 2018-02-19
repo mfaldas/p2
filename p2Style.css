@@ -1,14 +1,11 @@
 body {
     background-image: url('/images/_KatyPerry.jpg');
-    background-size: cover;
-
 }
 
 .parent {
 
-    min-width: 750px;
-    width: 40%;
-    height: 400px;
+    width: 750px;
+    height: 600px;
     background-color: rgba(255, 255, 255, 0.5);
     border: 10px outset rgba(0,0,0,0.05);
     border-radius: 25px;
@@ -22,3 +19,46 @@ body {
     left: 0;
 }
 
+.parent img {
+
+    max-height: 30%;
+    display: block;
+    margin:auto;
+}
+
+.parent h1 {
+
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: cursive;
+    color: #ae274e;
+}
+
+.splitTextBox {
+    margin-left: 3px;
+    width: 250px;
+}
+
+.billTextBox {
+    width: 250px;
+}
+
+.tipDropdown {
+    margin-left:14px;
+}
+.splitButton{
+
+    background-color: #ae274e;
+    border: 2px solid #ae274e;
+    color: white;
+    padding: 10px;
+    border-radius: 5em / 5em;
+    display: block;
+    margin: auto;
+}
+
+.standard {
+
+    text-align: justify;
+    padding-right: 35px;
+}

@@ -31,6 +31,7 @@ class Splitter {
         return $a;
     }
 
+    //My algorithim for the splitting of the bill.
     public function splitWays($b, $s, $cS) {
 
         $regularSplit = intval(($cS*100))/100;
