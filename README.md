@@ -89,3 +89,4 @@ Please note the following:
 1. Both text input values are prefilled.  As such, user input will be sanitizied.
 2. Split value field only accepts int values from 1-99.
 3. Bill value field accepts ints and floats.  Acceptable float values include "0.01", "0.1", "1".
+4. Uses Design C with GET.
