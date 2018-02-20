@@ -2,7 +2,6 @@
 /**
  * Form.php
  * Class that validates input from user.  Modified getErrorMessage() from type Private to Protected.
- *
  * Created by: Susan Buck
  * Modified by: Marc-Eli Faldas
  * Last Modified: 2/17/2018

@@ -10,9 +10,9 @@
  * Last Modified: 2/20/2018
  */
 
-require $_SERVER['DOCUMENT_ROOT']."/classes/Splitter.php";
-require $_SERVER['DOCUMENT_ROOT']."/classes/Form.php";
-require $_SERVER['DOCUMENT_ROOT']."/classes/MyForm.php";
+require $_SERVER['DOCUMENT_ROOT'] . "/classes/Splitter.php";
+require $_SERVER['DOCUMENT_ROOT'] . "/classes/Form.php";
+require $_SERVER['DOCUMENT_ROOT'] . "/classes/MyForm.php";
 
 use BillSplitter\Splitter;
 use Faldas\MyForm;
@@ -24,7 +24,7 @@ $split = $form->get("split", ""); //How Many People to Split Amongst
 $bill = $form->get("bill", ""); //Bill from User
 $tip = isset($_GET["tip"]) ? $_GET["tip"] : "1"; //How Much Tip
 $roundUp = $form->has("roundUp"); //Round to the nearest dollar Ex. $1.10 -> $2.00, $1.60->2.00, $1.00 -> $1.00
-$initiateCalculation = false; //Boolean to determine to stay on the "Stand Div Welcome" or to start Calculation
+$initiateCalculation = false; //Boolean to determine to stay on the "Stand div Welcome" or to start Calculation
 $validCalculation = true; //Boolean to see if the split bill for everyone is greater than $0.01
 
 if ($split == "" && $bill == "" && $tip = "1") {
@@ -49,7 +49,8 @@ $splitter = new Splitter($split, $bill, $tip, $roundUp);
 $billWithTip = $splitter->getBillWithTip();
 $calcS = $splitter->calculatedSplit($billWithTip);
 
-//Creates an array with people who pay normal and how many pay extra by 1 cent Ex. 9.99/4 = 1 person owes 2.49 and 3 people owe $2.50
+//Creates an array with people who pay normal and how many pay extra by 1 cent
+//Ex. 9.99/4 = 1 person owes 2.49 and 3 people owe $2.50
 $splitBetween = $splitter->splitWays($billWithTip, $calcS);
 
 if ($calcS < 0.01) {

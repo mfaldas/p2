@@ -56,14 +56,16 @@ require "logicFiles/helpers.php";
                            required>
                 </label>
 
-                <p><small><em>*Required Inputs</em></small></p>
+                <p>
+                    <small><em>*Required Inputs</em></small>
+                </p>
 
             </div>
 
             <div class="col-sm-3">
                 <label class="tipLabel">Tip:
                     <select name="tip" class="tipDropdown">
-                        <option value="1" <?php if ($_GET["tip"] == "t") echo "selected"; ?>>No Tip</option>
+                        <option value="1" <?php if ($_GET["tip"] == "1.00") echo "selected"; ?>>No Tip</option>
                         <option value="1.10" <?php if ($_GET["tip"] == "1.10") echo "selected"; ?>>10% Tip</option>
                         <option value="1.15" <?php if ($_GET["tip"] == "1.15") echo "selected"; ?>>15% Tip</option>
                         <option value="1.20" <?php if ($_GET["tip"] == "1.20") echo "selected"; ?>>20% Tip</option>

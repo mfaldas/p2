@@ -1,7 +1,7 @@
 <?php
 
 /**
- * splitter.php
+ * Splitter.php
  * Splitter class that is used to calculate the payments, ensure the payments are valid,
  * and create results that the user will understand.
  * Created and Modified By: Marc-Eli Faldas
