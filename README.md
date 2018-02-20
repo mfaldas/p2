@@ -4,15 +4,13 @@
 
 ## Outside Resources
 
-Images
-------
+#Images
 
 Background Image "_KatyPerry.jpg": <https://wallpaperscraft.com/download/katy_perry_table_girl_smile_brunette_85339/3840x2160#>
 
 Katy Perry Logo "_KatyPerryLogo.png": <http://logonoid.com/katy-perry-logo/>
 
-Code References
----------------
+#Code References
 
 Opacity Code for Parent Div: <https://stackoverflow.com/questions/3969380/achieving-white-opacity-effect-in-html-css>
 
@@ -86,7 +84,7 @@ N/A
 ## Notes for Instructor
 
 Please note the following:
-1. Both text input values are prefilled.  As such, user input will be sanitizied.
-2. Split value field only accepts int values from 1-99.
-3. Bill value field accepts ints and floats.  Acceptable float values include "0.01", "0.1", "1".
-4. Uses Design C with GET.
+* Both text input values are prefilled.  As such, user input will be sanitizied.
+* Split value field only accepts int values from 1-99.
+* Bill value field accepts ints and floats.  Acceptable float values include "0.01", "0.1", "1".
+* Uses Design C with GET.
