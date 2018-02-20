@@ -5,9 +5,9 @@
  */
 function dump($mixed = null)
 {
-    echo '<pre>';
+    echo "<pre>";
     var_dump($mixed);
-    echo '</pre>';
+    echo "</pre>";
 }
 
 /**
@@ -30,7 +30,7 @@ function sanitize($mixed = null)
         return array_map($func, $array);
     }
 
-    return array_map_recursive('convertHtmlEntities', $mixed);
+    return array_map_recursive("convertHtmlEntities", $mixed);
 }
 
 /**

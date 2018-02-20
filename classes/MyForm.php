@@ -1,8 +1,14 @@
 <?php
+/**
+ * MyForm.php
+ * An extension/child of the Form.php classes.  MyForm validates if the bill input is a valid form
+ * of USD currency.  getErrorMessage() was modified to present the error to the validation.
+ *
+ * Created by: Marc-Eli Faldas
+ * Last Modified: 2/17/2018
+ */
 
 namespace Faldas;
-
-require ('Form.php');
 use DWA\Form;
 
 
@@ -35,7 +41,7 @@ class MyForm extends Form{
 
     private function secondaryBillValidity($test) {
 
-        if ( !strpos($test,'.')) {
+        if ( !strpos($test,".")) {
             return true;
         } else {
             $splicedTest = explode(".", $test);
@@ -49,31 +55,34 @@ class MyForm extends Form{
         }
     }
     /**
-     * Given a String rule like 'alphaNumeric' or 'required'
-     * It'll return a String message appropriate for that rule
+     * Given a String rule like "alphaNumeric" or "required"
+     * It"ll return a String message appropriate for that rule
      * Default message is used if no message is set for a given rule
      * @param $rule
      * @param null $parameter
      * @return mixed|string
+     *
+     * Created by: Susan Buck
+     * Modified by: Marc-Eli Faldas
+     * Last Modified: 2/17/2018
      */
     protected function getErrorMessage($rule, $parameter = null)
     {
         $language = [
-            'alphaNumeric' => ' can only contain letters or numbers.',
-            'alpha' => ' can only contain letters.',
-            'numeric' => ' can only contain numbers.',
-            'required' => ' can not be blank.',
-            'email' => ' is not a valid email address.',
-            'min' => ' has to be greater than ' . $parameter . '.',
-            'max' => ' has to be less than ' . $parameter . '.',
-            'moneyFormat' => ' has to be in USD currency format.',
+            "alphaNumeric" => " can only contain letters or numbers.",
+            "alpha" => " can only contain letters.",
+            "numeric" => " can only contain numbers.",
+            "required" => " can not be blank.",
+            "email" => " is not a valid email address.",
+            "min" => " has to be greater than " . $parameter . ".",
+            "max" => " has to be less than " . $parameter . ".",
+            "moneyFormat" => " has to be in USD currency format.",
         ];
 
         # If a message for the rule was found, use that, otherwise default to " has an error"
-        $message = isset($language[$rule]) ? $language[$rule] : ' has an error.';
+        $message = isset($language[$rule]) ? $language[$rule] : " has an error.";
 
         return $message;
     }
-
 }
 

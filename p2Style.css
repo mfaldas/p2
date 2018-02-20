@@ -1,13 +1,13 @@
 body {
-    background-image: url('/images/_KatyPerry.jpg');
+    background-image: url("/images/_KatyPerry.jpg");
 }
 
 .parent {
 
     width: 750px;
-    height: 600px;
+    height: 620px;
     background-color: rgba(255, 255, 255, 0.5);
-    border: 10px outset rgba(0,0,0,0.05);
+    border: 10px outset rgba(0, 0, 0, 0.05);
     border-radius: 25px;
     padding: 40px;
 
@@ -23,7 +23,7 @@ body {
 
     max-height: 30%;
     display: block;
-    margin:auto;
+    margin: auto;
 }
 
 .parent h1 {
@@ -44,9 +44,10 @@ body {
 }
 
 .tipDropdown {
-    margin-left:14px;
+    margin-left: 14px;
 }
-.splitButton{
+
+.splitButton {
 
     background-color: #ae274e;
     border: 2px solid #ae274e;

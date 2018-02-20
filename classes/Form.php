@@ -1,4 +1,12 @@
 <?php
+/**
+ * Form.php
+ * Class that validates input from user.  Modified getErrorMessage() from type Private to Protected.
+ *
+ * Created by: Susan Buck
+ * Modified by: Marc-Eli Faldas
+ * Last Modified: 2/17/2018
+ */
 
 namespace DWA;
 
@@ -26,7 +34,7 @@ class Form
      */
     public function isSubmitted()
     {
-        return $_SERVER['REQUEST_METHOD'] == 'POST' || !empty($_GET);
+        return $_SERVER["REQUEST_METHOD"] == "POST" || !empty($_GET);
     }
 
     /**
@@ -57,7 +65,7 @@ class Form
      * @param bool $sanitize
      * @return array|string
      */
-    public function prefill($field, $default = '', $sanitize = true)
+    public function prefill($field, $default = "", $sanitize = true)
     {
         if (isset($this->request[$field])) {
             if ($sanitize) {
@@ -90,7 +98,7 @@ class Form
             return array_map($func, $array);
         }
 
-        return arrayMapRecursive('convertHtmlEntities', $mixed);
+        return arrayMapRecursive("convertHtmlEntities", $mixed);
     }
 
     /**
@@ -105,7 +113,7 @@ class Form
 
     /**
      * Given an array of fields => validation rules
-     * Will loop through each field's rules
+     * Will loop through each field"s rules
      * Returns an array of error messages
      * Stops after the first error for a given field
      * Available rules: alphaNumeric, alpha, numeric, required, email, min:x, max:x
@@ -118,7 +126,7 @@ class Form
 
         foreach ($fieldsToValidate as $fieldName => $rules) {
             # Each rule is separated by a |
-            $rules = explode('|', $rules);
+            $rules = explode("|", $rules);
 
             foreach ($rules as $rule) {
                 # Get the value for this field from the request
@@ -126,8 +134,8 @@ class Form
 
                 # Handle any parameters with the rule, e.g. max:99
                 $parameter = null;
-                if (strstr($rule, ':')) {
-                    list($rule, $parameter) = explode(':', $rule);
+                if (strstr($rule, ":")) {
+                    list($rule, $parameter) = explode(":", $rule);
                 }
 
                 # Run the validation test with the given rule
@@ -135,7 +143,7 @@ class Form
 
                 # Test failed
                 if (!$test) {
-                    $errors[] = 'The field ' . $fieldName . $this->getErrorMessage($rule, $parameter);
+                    $errors[] = "The field " . $fieldName . $this->getErrorMessage($rule, $parameter);
 
                     # Only indicate one error per field
                     break;
@@ -150,8 +158,8 @@ class Form
     }
 
     /**
-     * Given a String rule like 'alphaNumeric' or 'required'
-     * It'll return a String message appropriate for that rule
+     * Given a String rule like "alphaNumeric" or "required"
+     * It"ll return a String message appropriate for that rule
      * Default message is used if no message is set for a given rule
      * @param $rule
      * @param null $parameter
@@ -160,17 +168,17 @@ class Form
     protected function getErrorMessage($rule, $parameter = null)
     {
         $language = [
-            'alphaNumeric' => ' can only contain letters or numbers.',
-            'alpha' => ' can only contain letters.',
-            'numeric' => ' can only contain numbers.',
-            'required' => ' can not be blank.',
-            'email' => ' is not a valid email address.',
-            'min' => ' has to be greater than ' . $parameter . '.',
-            'max' => ' has to be less than ' . $parameter . '.',
+            "alphaNumeric" => " can only contain letters or numbers.",
+            "alpha" => " can only contain letters.",
+            "numeric" => " can only contain numbers.",
+            "required" => " can not be blank.",
+            "email" => " is not a valid email address.",
+            "min" => " has to be greater than " . $parameter . ".",
+            "max" => " has to be less than " . $parameter . ".",
         ];
 
         # If a message for the rule was found, use that, otherwise default to " has an error"
-        $message = isset($language[$rule]) ? $language[$rule] : ' has an error.';
+        $message = isset($language[$rule]) ? $language[$rule] : " has an error.";
 
         return $message;
     }
@@ -185,7 +193,7 @@ class Form
      */
     protected function alphaNumeric($value)
     {
-        return ctype_alnum(str_replace(' ', '', $value));
+        return ctype_alnum(str_replace(" ", "", $value));
     }
 
     /**
@@ -195,7 +203,7 @@ class Form
      */
     protected function alpha($value)
     {
-        return ctype_alpha(str_replace(' ', '', $value));
+        return ctype_alpha(str_replace(" ", "", $value));
     }
 
     /**
@@ -205,7 +213,7 @@ class Form
      */
     protected function numeric($value)
     {
-        return ctype_digit(str_replace(' ', '', $value));
+        return ctype_digit(str_replace(" ", "", $value));
     }
 
     /**
@@ -217,7 +225,7 @@ class Form
     {
         $value = trim($value);
 
-        return $value != '' && isset($value) && !is_null($value);
+        return $value != "" && isset($value) && !is_null($value);
     }
 
     /**
