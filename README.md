@@ -77,7 +77,7 @@ Changed getErrorMessage($rule, $parameter = null) from private to protected to h
 Helpers.php (Code from Lecture): <https://github.com/susanBuck/foobooks0/blob/master/helpers.php>
 
 
-## Code style Divergences
+## Code Style Divergences
 N/A
 
 ## Notes for Instructor

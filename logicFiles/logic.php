@@ -10,9 +10,9 @@
  * Last Modified: 2/20/2018
  */
 
-require $_SERVER['DOCUMENT_ROOT'] . "/classes/Splitter.php";
-require $_SERVER['DOCUMENT_ROOT'] . "/classes/Form.php";
-require $_SERVER['DOCUMENT_ROOT'] . "/classes/MyForm.php";
+require($_SERVER['DOCUMENT_ROOT'] . "/classes/Splitter.php");
+require($_SERVER['DOCUMENT_ROOT'] . "/classes/Form.php");
+require($_SERVER['DOCUMENT_ROOT'] . "/classes/MyForm.php");
 
 use BillSplitter\Splitter;
 use Faldas\MyForm;
