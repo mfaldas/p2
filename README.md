@@ -4,13 +4,13 @@
 
 ## Outside Resources
 
-# Images
+**Images**
 
 Background Image "_KatyPerry.jpg": <https://wallpaperscraft.com/download/katy_perry_table_girl_smile_brunette_85339/3840x2160#>
 
 Katy Perry Logo "_KatyPerryLogo.png": <http://logonoid.com/katy-perry-logo/>
 
-# Code References
+**Code References**
 
 Opacity Code for Parent Div: <https://stackoverflow.com/questions/3969380/achieving-white-opacity-effect-in-html-css>
 
