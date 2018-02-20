@@ -4,13 +4,13 @@
 
 ## Outside Resources
 
-#Images
+# Images
 
 Background Image "_KatyPerry.jpg": <https://wallpaperscraft.com/download/katy_perry_table_girl_smile_brunette_85339/3840x2160#>
 
 Katy Perry Logo "_KatyPerryLogo.png": <http://logonoid.com/katy-perry-logo/>
 
-#Code References
+# Code References
 
 Opacity Code for Parent Div: <https://stackoverflow.com/questions/3969380/achieving-white-opacity-effect-in-html-css>
 
@@ -52,8 +52,7 @@ if ($b == $calculatedTotal) {
 
 The code from the Stack Overflow mostly served as a jumping off point of logic as opposed to a copy of the code.
 
-Form.php: <https://github.com/susanBuck/foobooks0/blob/461624fef8d6da25baefb2b8b808fd4c8abc1e3f/Form.php>
-Code from Lecture
+Form.php (Code from Lecture): <https://github.com/susanBuck/foobooks0/blob/461624fef8d6da25baefb2b8b808fd4c8abc1e3f/Form.php>
 
 Changed getErrorMessage($rule, $parameter = null) from private to protected to have child class inherit the method and modify it.
 
@@ -75,8 +74,8 @@ Changed getErrorMessage($rule, $parameter = null) from private to protected to h
     }
 ```
 
-Helpers.php: <https://github.com/susanBuck/foobooks0/blob/master/helpers.php>
-Code from Lecture
+Helpers.php (Code from Lecture): <https://github.com/susanBuck/foobooks0/blob/master/helpers.php>
+
 
 ## Code style Divergences
 N/A
