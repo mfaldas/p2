@@ -52,6 +52,14 @@ if ($b == $calculatedTotal) {
 
 The code from the Stack Overflow mostly served as a jumping off point of logic as opposed to a copy of the code.
 
+Connecting Files from Different Directories: <https://stackoverflow.com/questions/13394924/php-serverdocument-root>
+
+```
+require($_SERVER['DOCUMENT_ROOT'] . "/classes/Splitter.php");
+require($_SERVER['DOCUMENT_ROOT'] . "/classes/Form.php");
+require($_SERVER['DOCUMENT_ROOT'] . "/classes/MyForm.php");
+```
+
 Form.php (Code from Lecture): <https://github.com/susanBuck/foobooks0/blob/461624fef8d6da25baefb2b8b808fd4c8abc1e3f/Form.php>
 
 Changed getErrorMessage($rule, $parameter = null) from private to protected to have child class inherit the method and modify it.
