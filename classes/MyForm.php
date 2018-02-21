@@ -82,7 +82,8 @@ class MyForm extends Form
      * Given a String rule like "alphaNumeric" or "required"
      * It"ll return a String message appropriate for that rule
      * Default message is used if no message is set for a given rule
-     * Added an error message for moneyFormat error.
+     * Added an error message for moneyFormat error.  Modified numeric to say
+     * say only positive whole numbers can be used.
      * @param $rule
      * @param null $parameter
      * @return mixed|string
@@ -95,7 +96,7 @@ class MyForm extends Form
         $language = [
             "alphaNumeric" => " can only contain letters or numbers.",
             "alpha" => " can only contain letters.",
-            "numeric" => " can only contain numbers.",
+            "numeric" => " can only contain positive whole numbers.",
             "required" => " can not be blank.",
             "email" => " is not a valid email address.",
             "min" => " has to be greater than " . $parameter . ".",

@@ -69,8 +69,8 @@ class Splitter
             return [(string)$s, $cSString, "0", "0.00"];
         } else {
             $difference = $b - $calculatedTotal;
-            $payExtra = round($difference / 0.01);
-            $payNormal = $s - $payExtra;
+            $payExtra = round($difference / 0.01);  //How many people will pay extra 1 cent
+            $payNormal = $s - $payExtra; //How many people will pay the normal payment
             $extraSplit = $regularSplit + 0.01;
 
             $regularSplitString = number_format((float)$regularSplit, 2, ".", "");

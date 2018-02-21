@@ -45,8 +45,8 @@ if ($b == $calculatedTotal) {
         return [(string)$s, $cSString, "0", "0.00"];
     } else {
         $difference = $b - $calculatedTotal;
-        $payExtra = round($difference / 0.01);
-        $payNormal = $s - $payExtra;
+        $payExtra = round($difference / 0.01);  //How many people will pay extra 1 cent
+        $payNormal = $s - $payExtra; //How many people will pay the normal payment
         $extraSplit = $regularSplit + 0.01;
 ```
 
@@ -86,7 +86,7 @@ Helpers.php (Code from Lecture): <https://github.com/susanBuck/foobooks0/blob/ma
 
 
 ## Code Style Divergences
-N/A
+Line 93 of index.php has characters more than 180 characters.
 
 ## Notes for Instructor
 
