@@ -86,7 +86,7 @@ Helpers.php (Code from Lecture): <https://github.com/susanBuck/foobooks0/blob/ma
 
 
 ## Code Style Divergences
-Line 93 of index.php has characters more than 180 characters.
+Line 93 of index.php has characters more than 180 characters as it is a description for the user.
 
 ## Notes for Instructor
 
